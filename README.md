@@ -17,6 +17,8 @@ Clicking the feature markets table will expand/collapse the view of both markets
 
 Clicking the feature outcome table will toggle between Fractional and Decimal odds for the user.
 
+All of the code I have written is within .src/posts
+
 ## Tasks Completed
 Task One
 
