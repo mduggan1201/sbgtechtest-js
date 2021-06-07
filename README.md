@@ -1,6 +1,42 @@
-# Getting Started with Create React App
+# Sky Betting and Gaming - JavaScript Tech Test Submission
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Choices Made
+
+* I've been unable to establish a websocket connection through Docker that was fit for purpose in this build. Instead I have used the Sportsbook API to tackle the tasks within.
+
+* The biggest limitation this has caused is the need to repeatly fetch from the API for different levels of data such as
+       1. Finding live events through one fetch
+       2. Mapping the feature market IDs to an array and then creating a function to fetch the results of a concatentated address
+       3. Mapping the outcome Ids of these feature markets to an array and then creating a similar function to fetch results.
+
+## App Description
+
+The application shows the currently live Football events; with two collapsing tables showing both the feature markets and the first outcome associated with this featured market.
+
+Clicking the feature markets table will expand/collapse the view of both markets and outcomes; outcomes cannot be opened without markets being open so if a user clicks this box when collapsed it is expected to have no effect.
+
+Clicking the feature outcome table will toggle between Fractional and Decimal odds for the user.
+
+## Tasks Completed
+Task One
+
+1. Build an application which displays the currently live Football events. An example of making this request is shown below.
+2. Add an option to show the primary market for each of the events
+   1. The primary market should also result in the odds showing for any outcomes linked to the market*
+3. Add a feature to toggle the odds display between fractional and decimal (this should apply globally to any place in the app where odds are shown)
+
+-* This currently only shows the first outcome linked to each market
+
+The submission uses the Sportsbook API JSON file
+
+## Requirements
+
+* Docker - required for connection to the JSON image listed below
+
+```bash
+# running the basic image
+docker run -it --rm --name sbg-tech-test-api -p 8888-8890:8888-8890 sbgtechtest/api:2.0.0
+```
 
 ## Available Scripts
 
@@ -11,60 +47,4 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
