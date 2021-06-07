@@ -5,9 +5,10 @@
 * I've been unable to establish a websocket connection through Docker that was fit for purpose in this build. Instead I have used the Sportsbook API to tackle the tasks within.
 
 * The biggest limitation this has caused is the need to repeatly fetch from the API for different levels of data such as
-       1. Finding live events through one fetch
-       2. Mapping the feature market IDs to an array and then creating a function to fetch the results of a concatentated address
-       3. Mapping the outcome Ids of these feature markets to an array and then creating a similar function to fetch results.
+
+1. Finding live events through one fetch
+2. Mapping the feature market IDs to an array and then creating a function to fetch the results of a concatentated address
+3. Mapping the outcome Ids of these feature markets to an array and then creating a similar function to fetch results.
 
 ## App Description
 
